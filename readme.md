@@ -34,25 +34,14 @@ $ pytest test/test_cut_down_rods.py -sv
 
 # Algorithm
 
-The idea is to keep removing edges that the do not change the connectivity of the graph. We know a spanning tree is a subgraph which includes all of the vertices of $G$, with minimum possible number of edges. So we are essentially removing edges until we get to the spanning tree of $G$. In the case of $G$ being disconnected, we just have to find all connected components, and its respective spanning tree. Since we do not need to enumerate which edges to remove, we can make use of the following theorems.
+The idea is to keep removing edges that the do not change the connectivity of the graph. We know a spanning tree is a subgraph which includes all of the vertices of G​, with minimum possible number of edges. So we are essentially removing edges until we get to the spanning tree of G. In the case of G being disconnected, we just have to find all connected components, and its respective spanning tree. Since we do not need to enumerate which edges to remove, we can make use of the following theorems.
 
 - Every connected component has at least 1 spanning tree.
-- Any spanning tree has $n-1$ edges, where $n$ is number of vertices.
+- Any spanning tree has n-1 edges, where n​ is number of vertices.
 
 Then,
 
-Let $G$ be undirected multi-graph $G$, with vertex-set $V$ and edge-set $E$.
-
-Let $C_i$ be the $i$-th connected component of graph $G$.
-
-Let $|E(C_i)|$ be the number of edges in the $i$-th connected component of $G$.
-
-Let $|V(C_i)|$ be the number of vertices in the $i$-th connected component of $G$.
-
-Let $|E_{tocut}|$ be number of edges to cut such that connectivity of graph remains unchanged.
-$$
-|E_{tocut}| = \sum_{i} (|E(C_i)| - (|V(C_i)|-1))
-$$
+![algo math](https://github.com/longwind48/tree_spanning_rods/blob/master/img/algo.png)
 
 ---
 
