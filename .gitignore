@@ -1,0 +1,7 @@
+__pycache__/
+.ipynb_checkpoints/
+.pytest_cache/
+.vscode/
+Untitled.ipynb
+spanning_tree_traci.zip
+.DS_Store
