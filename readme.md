@@ -51,15 +51,11 @@ Then,
 
 
 
-##  Before you go...
+##  Remarks
 
-- I could've used a spanning tree algorithm but i figured this is more efficient in 
+- I could've used a spanning tree algorithm but i figured this is more efficient in terms of complexity.
 
- terms of complexity.
-
-- I used `networkx` library for defining graphs, and `nx.connected_components()` to find 
-
- connected components (they use breadth-first-search).
+- I used `networkx` library for defining graphs, and `nx.connected_components()` to find connected components (they use breadth-first-search).
 
 - I made many assumptions for the input graph. Look at docstrings for `is_input_valid()`. 
 - In general, it takes in a multigraph with non-negative integers as vertex names.
